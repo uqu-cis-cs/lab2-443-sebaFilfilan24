@@ -1,4 +1,4 @@
-/***** DO NOT ATTEMPT To CHANGE ANY CODE LINES ****/
+؛/***** DO NOT ATTEMPT To CHANGE ANY CODE LINES ****/
 package edu.uqu.cs;
 
 import static org.junit.Assert.assertArrayEquals;

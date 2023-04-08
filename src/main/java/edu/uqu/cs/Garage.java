@@ -21,6 +21,8 @@ public class Garage{
      * private classType [] varName = new classType[size];
      *
      */
+    private Car [] cars = new ;
+    Car[3];
 
     /************ Part 2 **************/
     /**
@@ -31,6 +33,8 @@ public class Garage{
      * public dataType varName= value;
      *
      */
+
+    public static int countcars = 0
 
     /************ Part 3 **************/
     /**
@@ -46,6 +50,18 @@ public class Garage{
      *}
      */
 
+    public class CarDealer {
+        private Car[] cars;
+        public CarDealer (){
+            cars = new Car[3];
+            for(int i=0;i<cars,length;i++){
+                cars[i];
+                new Car();
+            }
+
+        }
+    }
+
     /************ Part 4 **************/
     /**
      * Define addCar(String parameter) that adds a new car (by model) to the garage 
@@ -60,6 +76,25 @@ public class Garage{
      * public void methodName(String m)
      */
 
+    public void addCar(String parameter){
+        boolean carExists = false;
+        for(int i=0; i< countCars; i++){
+            if (cars[i].getModel().equals(parameter)){
+                carExists = true;
+                break;
+            }
+        }
+
+    if (!carExists){
+        Car newCar =new Car (parameter);
+        newCar.moveCarIn();
+        cars[coutCars]= newCar;
+        coutCars++;
+
+    }
+    
+    }
+
 
     /************ Part 5 **************/
     /**
@@ -71,6 +106,15 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+
+    public void moveOut(String model) {
+       for (int i = 0; i < countCars; i++) {
+      if (cars[i].getModel().equals(model)) {
+         cars[i].moveCarOut();
+         break;
+      }
+   }
+}
 
 
 
@@ -84,6 +128,15 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+    
+    public void moveIn(String model) {
+      for (int i = 0; i < countCars; i++) {
+      if (cars[i].getModel().equals(model)) {
+         cars[i].moveCarIn();
+         break;
+        }
+     }
+}
 
 
     /************ Part 7 **************/
@@ -95,6 +148,16 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+     
+public void listCars() {
+   if (countCars == 0) {
+      System.out.println("No cars in the garage.");
+   } else {
+      for (int i = 0; i < countCars; i++) {
+         System.out.println(cars[i].getModel() + " - " + cars[i].getColor() + " - " + cars[i].getLicensePlate() + " - " + (cars[i].isInOutGarage() ? "Inside" : "Outside"));
+      }
+   }
+}
 
 
 
